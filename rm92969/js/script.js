@@ -87,9 +87,24 @@ btn.addEventListener("click", ()=> {
 
 // Iterando o array
 const exibirDados = () => {
+    /* for simples
     for (let i = 0; i < pessoas.length; i++){
-        console.log(pessoas[i])
-    }
+        console.log(pessoas[i].nmTask)
+    }*/
+
+    /* for of
+    for (let pessoa of pessoas) {
+        console.log(pessoa.nmTask)
+    }*/
+
+    /* for in
+    for (let indice in pessoas) {
+        console.log(pessoas[indice].nmTask)
+    }*/
+
+    pessoas.forEach(task => {
+        console.log(task.nmTAsk)
+    })
 }
 
 const btnListar = document
