@@ -60,19 +60,28 @@ const pessoa = {
 }
 
 //Pegando os dados do Formulário
-function pegarDados(){
-    pessoa.nmTask = document.getElementById("nmTaskId").value 
-    pessoa.dtTask = document.getElementById("dtTaskId").value
-    pessoa.descTask = document.getElementById("descTaskId").value
+//Aqui estamos pegando os dados do formulário e salvando no objeto
+//Arrow function - função anônima
+//const pegarDados = () =>{
+    //pessoa.nmTask = document.getElementById("nmTaskId").value 
+    //pessoa.dtTask = document.getElementById("dtTaskId").value
+    //pessoa.descTask = document.getElementById("descTaskId").value
 
-    exibirDados()
-}
+   // exibirDados()
+//}
 
 //Exibindo os dados do Objeto
-function exibirDados(){
-    console.log(pessoa)
-}
+//function exibirDados(){
+    //console.log(pessoa)
+//}
 
 //Recuperando o botão
-const btn = document.getElementById("btnEnviar")
-btn.addEventListener("click",  pegarDados)
+//const btn = document.getElementById("btnEnviar")
+//const btn = document.querySelector("#btnEnviar")
+//btn.addEventListener("click",  () => {
+    //pessoa.nmTask = document.getElementById("nmTaskId").value 
+    //pessoa.dtTask = document.getElementById("dtTaskId").value
+    //pessoa.descTask = document.getElementById("descTaskId").value
+
+    //exibirDados()
+//})
