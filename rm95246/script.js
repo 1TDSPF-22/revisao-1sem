@@ -31,3 +31,48 @@
 
 //Constante - Não pode ser alterada
 //const idade = 20
+
+//Objeto - Coleção de chaves e valores
+//Exemplo de objeto
+//const pessoa = {
+    //nome: "João",
+    //sobrenome: "Silva",
+    //idade: 20,
+    //vendedor: true,
+    //}
+//pessoa.nome = "Biscoito"
+//pessoa.sobrenome = "de Polvilho"
+//pessoa.idade = 30
+//pessoa.vendedor = false
+//console.log(pessoa)
+
+//pessoa.idade = 40
+//console.log(pessoa)
+
+
+//JSON - Javascript Object Notation
+
+//Gravando dados do Formulário no Objeto
+const pessoa = {
+    nmTask: "",
+    dtTask: "",
+    descTask: "",
+}
+
+//Pegando os dados do Formulário
+function pegarDados(){
+    pessoa.nmTask = document.getElementById("nmTaskId").value 
+    pessoa.dtTask = document.getElementById("dtTaskId").value
+    pessoa.descTask = document.getElementById("descTaskId").value
+
+    exibirDados()
+}
+
+//Exibindo os dados do Objeto
+function exibirDados(){
+    console.log(pessoa)
+}
+
+//Recuperando o botão
+const btn = document.getElementById("btnEnviar")
+btn.addEventListener("click",  pegarDados)
