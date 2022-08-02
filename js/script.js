@@ -55,7 +55,7 @@
 //}
 
 //Exibindo os dados do objeto
-function exibirDados(){
+function exibirDados() {
     console.log(pessoa)
 }
 
@@ -70,17 +70,17 @@ function exibirDados(){
 //})
 
 //Gravando os dados do Formulário no objeto
-const pessoa ={
-    nmTask:"",
-    dtTask:"",
-    descTask:""
+const pessoa = {
+    nmTask: "",
+    dtTask: "",
+    descTask: ""
 }
 
 //Declaradno um array
 const pessoas = []
 
 const btnEnviar = document.getElementById("btnEnviar")
-btnEnviar.addEventListener("click", ()=>{
+btnEnviar.addEventListener("click", () => {
     pessoa.nmTask = document.getElementById("nmTaskId").value
     pessoa.dtTask = document.getElementById("dtTaskId").value
     pessoa.descTask = document.getElementById("descTaskId").value
@@ -90,12 +90,41 @@ btnEnviar.addEventListener("click", ()=>{
 })
 
 //iterando o array
-for(let i = 0; i < pessoas.length; i++){
+for (let i = 0; i < pessoas.length; i++) {
     console.log(pessoas[i])
 }
 
 //Atrelando o evento de click ao botão
 const btnListar = document.querySelector("#btnListar")
-btnListar.addEventListener("click", ()=>{
+btnListar.addEventListener("click", () => {
     exibirDados()
 })
+
+//----------------------------------------------------------------
+
+function recebeCep() {
+    var cep = document.getElementById("CepCliId")
+    const btnEnviar = document.getElementById("btnEnviar")
+
+
+    cep.onblur = function recebeCep() {
+        var maskCep = new maskCep("^[0-9]{5}\-[0-9]{3}$")
+        if (maskCep.test(cep.value) == true) {
+            cep.style.borderColor = "#008000"
+            enviar.style.color = "#008000"
+            enviar.alert("CEP válido")
+
+        } else {
+            cep.style.bordercolor = "#ff0000"
+            enviar.style.color = "#ff0000"
+            enviar.alert("CEP invalido, digite novamente")
+        
+            cep.onfocus = function recebeCep(){
+                cep.style.bordercolor =""
+                cep.value =""
+                enviar.style.color=""
+                
+            }
+        }
+    }
+}

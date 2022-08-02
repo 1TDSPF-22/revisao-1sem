@@ -1,35 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REVISÃO</title>
     <script src="./js/script.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
+    <h1>AlexCorp</h1>
     <div>
-        <form action="index.html" method="POST">
+        <form action="index.html" method="post">
             <fieldset>
                 <legend>CADASTRO DE TAREFA</legend>
-                <div>
-                    <label for="nmTaskId">Tarefa:</label>
-                    <input type="text" name="nmTask" id="nmTaskId" placeholder="Tarefa">
+                <div class="left">
+                    <div>
+                        <label for="nmTaskId">Tarefa:</label>
+                        <input type="text" name="nmTask" id="nmTaskId" placeholder="Tarefa">
+                    </div>
+                    <div>
+                        <label for="dtTaskId">Data da realização:</label>
+                        <input type="date" name="dtTask" id="dtTaskId">
+                    </div>
+                    <div>
+                        <label for="descTaskId">Descrição:</label>
+                        <input type="text" name="descTask" id="descTaskId" placeholder="Descrição">
+                    </div>
+
                 </div>
-                <div>
-                    <label for="dtTaskId">Data da realização:</label>
-                    <input type="date" name="dtTask" id="dtTaskId">
-                </div>
-                <div>
-                    <label for="descTaskId">Descrição</label>
-                    <input type="text" name="descTask" id="descTaskId" placeholder="Descrição">
-                </div>
-                <div>
-                    <button type="button" id="btnEnviar">ENVIAR</button>
-                    <button type="button" id="btnListar">LISTAR</button>
+                <div class="right">
+                    <div>
+                        <label for="nmCliId">Nome do cliente:</label>
+                        <input type="text" name="nmCli" id="nmCliId" placeholder="Nome do cliente">
+                    </div>
+                    <div>
+                        <label for="CepCliId">CEP do cliente</label>
+                        <input type="text" name="cepCli" id="cepCliId" placeholder="CEP do cliente">
+                    </div>
+                    <div>
+                        <label for="numCepCliId">Nº</label>
+                        <input type="number" name="numCepCli" id="numCepCliId" placeholder="Nº do endereço">
+                    </div>
                 </div>
             </fieldset>
+            <div class="buttons">
+                <button type="button" id="btnEnviar">ENVIAR</button>
+                <button type="button" id="btnListar">LISTAR</button>
+            </div>
         </form>
     </div>
 </body>
+
 </html>

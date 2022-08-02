@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(28, 178, 224);
+}
+
+form{
+    background-color: aquamarine;
+}
+
+fieldset{
+    background-color: aqua;
+    margin-right: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+form > fieldset > legend{
+    margin-left: 10%;
+    padding: 5px;
+}
+
+.left{
+    background-color: antiquewhite;
+    margin-right: 5%;
+    padding: 5px;
+    margin-right: 15px;
+}
+
+.right{
+    background-color: bisque;
+    padding: 5px;
+    margin-left: 20px;
+}
