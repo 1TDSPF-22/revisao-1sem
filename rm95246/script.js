@@ -52,13 +52,6 @@
 
 //JSON - Javascript Object Notation
 
-//Gravando dados do Formulário no Objeto
-const pessoa = {
-    nmTask: "",
-    dtTask: "",
-    descTask: "",
-}
-
 //Pegando os dados do Formulário
 //Aqui estamos pegando os dados do formulário e salvando no objeto
 //Arrow function - função anônima
@@ -85,3 +78,61 @@ const pessoa = {
 
     //exibirDados()
 //})
+
+//Gravando dados do Formulário no Objeto
+//const pessoa = {
+    //nmTask: "",
+    //dtTask: "",
+    //descTask: "",
+//}
+
+//Declarando um array
+const pessoas = []
+
+const btnListar = document.querySelector("#btnListar")
+btnListar.addEventListener("click",  () => {
+    const pessoa = {
+        nmTask: "",
+        dtTask: "",
+        descTask: "",
+    } 
+
+    //Pegando os dados do formulário
+    pessoa.nmTask = document.getElementById("nmTaskId").value 
+    pessoa.dtTask = document.getElementById("dtTaskId").value
+    pessoa.descTask = document.getElementById("descTaskId").value
+
+//Adicionando os dados do Objeto no Array
+    pessoas.push(pessoa)  
+})
+
+//Exibindo os dados do objeto
+const exibirDados = () =>{
+//Interando o Array com for simples
+//for (let i = 0; i < pessoas.length; i++){
+    //console.log(pessoas[i])
+    //}
+//}
+
+//Iterando o Array com (for of)
+//for (let pessoa of pessoas){
+    //console.log(pessoa.nmTask)
+//}
+
+//Iterando o Array com (for in)
+//for (let indice in pessoas){
+    //console.log(pessoas[indice].nmTask)
+//}
+
+//Iterando o Array com (forEach)
+//pessoas.forEach(task => {
+    //console.log(task.nmTask)
+//})
+//}
+
+//Atrelando o evento ao click do botão
+const btnListar = document.querySelector("#btnListar")
+btnListar.addEventListener("click", () => {
+exibirDados()
+})
+}
