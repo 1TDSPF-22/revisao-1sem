@@ -97,43 +97,43 @@
 //});
 
 // Outra coisa
-const tarefas = [];
+//const tarefas = [];
 
-const tarefa = {
-	nmTask: "",
-	dtTask: "",
-	descTask: "",
-};
+//const tarefa = {
+//	nmTask: "",
+//	dtTask: "",
+//	descTask: "",
+//};
 
-const btnEnviar = document.querySelector("#btnEnviar");
-btnListar.addEventListener("click", () => {
-	tarefa.nmTask = document.getElementById("nmTaskId").value,
-    tarefa.dtTask = document.getElementById("dtTaskId").value,
-    tarefa.descTask = document.getElementById("descTaskId").value,
+//const btnEnviar = document.querySelector("#btnEnviar");
+//btnListar.addEventListener("click", () => {
+//	tarefa.nmTask = document.getElementById("nmTaskId").value,
+//    tarefa.dtTask = document.getElementById("dtTaskId").value,
+//    tarefa.descTask = document.getElementById("descTaskId").value,
 
-    tarefas.push(pessoa);	
-});
+//    tarefas.push(pessoa);	
+//});
 
-const exibirDados = () => {
+//const exibirDados = () => {
     // Iterando sobre um array com for simples
-    for (let i = 0; i < tarefas.length; i++) {
-        tarefa.log(pessoas[i]);
-    }
+//    for (let i = 0; i < tarefas.length; i++) {
+//        tarefa.log(pessoas[i]);
+//    }
     // Iterando sobre um array com for of
-    for (let tarefa of tarefas) {
-        tarefa.log(pessoa);
-    }
+//    for (let tarefa of tarefas) {
+//        tarefa.log(pessoa);
+//    }
     // Iterando sobre um array com for in
-    for (let i in tarefas) {
-        tarefa.log(pessoa[i]);
-    }
+//    for (let i in tarefas) {
+//        tarefa.log(pessoa[i]);
+//    }
     // Iterando sobre um array com forEach
-    tarefas.forEach(tarefa => {
-        tarefa.log(pessoa);
-    });
-};
+//    tarefas.forEach(tarefa => {
+//        tarefa.log(pessoa);
+//    });
+//};
 
-const btnListar = document.querySelector("#btnListarId");
-btnListar.addEventListener("click", () => {
-    exibirDados();
-});
+//const btnListar = document.querySelector("#btnListarId");
+//btnListar.addEventListener("click", () => {
+//    exibirDados();
+//});
