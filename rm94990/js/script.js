@@ -39,13 +39,14 @@ const pessoa = {
 }
 
 //Pegando os dados do Formulário
-function pegarDados(){
-    pessoa.nmTask = document.getElementById("nmTaskId").value
-    pessoa.dtTask = document.getElementById("dtTaskId").value
-    pessoa.descTask = document.getElementById("descTaskId").value
-
-    exibirDados()
-}
+//Arrow Function - Função Anônima
+//const pegarDados = () => {
+//    pessoa.nmTask = document.getElementById("nmTaskId").value
+//    pessoa.dtTask = document.getElementById("dtTaskId").value
+//    pessoa.descTask = document.getElementById("descTaskId").value
+//
+//    exibirDados()
+//}
 
 //Exibindo os dados do objeto
 function exibirDados(){
@@ -54,4 +55,10 @@ function exibirDados(){
 
 //Recuperando o botão
 const btn = document.getElementById("btnEnviar")
-btn.addEventListener("click", pegarDados)
+btn.addEventListener("click", () => {
+    pessoa.nmTask = document.getElementById("nmTaskId").value
+    pessoa.dtTask = document.getElementById("dtTaskId").value
+    pessoa.descTask = document.getElementById("descTaskId").value
+
+    exibirDados()
+})
