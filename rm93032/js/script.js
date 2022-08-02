@@ -32,12 +32,12 @@
 
 
 //Gravando os dados do Formulário no Objeto
-const pessoa = {
-    nmTask: "",
-    dtTask: "",
-    descTask: ""
+//const pessoa = {
+   // nmTask: "",
+   // dtTask: "",
+   //descTask: ""
 
-}
+//}
 
 //Pegando os dados do Formulário
 //Aqui estamos pegando os dados do formulário e salvando no objeto
@@ -49,10 +49,58 @@ const pessoa = {
 //}
 
 //Exibindo os dados do Objeto
-function exibirDados(){
-   console.log(pessoa)
-}
+//function exibirDados(){
+  // console.log(pessoa)
+//}
 
 //Recuperando o botão
-const btn = document.getElementById("btnEnviar")
-btn.addEventListener("click", pegarDados)
+//const btn = document.getElementById("btnEnviar")
+//btn.addEventListener("click", pegarDados)
+
+
+
+//Gravando os dados do Formulário no Objeto
+//const pessoa = {
+    //nmTask: "",
+    //dtTask: "",
+  // descTask: ""
+
+//}
+
+
+//Declarando um array
+const pessoas = []
+
+const btn = document.querySelector("btnEnviar")
+btnEnviar.addEventListener("click" , ()=> {
+    //Pegando dados do formulario
+    //Criando um novo objeto
+    const pessoa = {
+        nmTask: "",
+        dtTask: "",
+       descTask: ""
+    
+    }
+    pessoa.nmTask = document.getElementById("nmTaskId").value
+    pessoa.dtTask = document.getElementById("dtTaskId").value
+    pessoa.descTask = document.getElementById("descTaskId").value
+
+    //Adicionando os dados do Objeto no Array
+    pessoas.push(pessoa)
+    console.log(pessoas)
+})
+
+//Exibindo dados do objeto
+const exibirDados = ()=> {
+    //Interando o Array
+    for (let i = 0; i < pessoas.length; i++) {
+        console.log(pessoas[i])
+    }
+}
+
+//Atrelando o evento ao click ao botão
+const btnListar = document.getElementById("btnEnviar")
+btnListar.addEventListener("click", ()=> {
+    exibirDados()
+
+})
